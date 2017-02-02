@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-2"></div>
+    <div class="col-md-6">
+      <h1>Brian Derdiarian</h1>
+    </div>
+    <div class="col-md-2"></div>
+    <div class="col-md-1"></div>
+  </div>
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-2">
+  	<h4>Projects:</h4>
+    <% @allprojects.each do |project| %>
+    <%= link_to project.title, project_path(project) %></p>
+    <% end %>
+  </div>
+  <div class="col-md-6">
+  <% @articles.each do |article| %>
+    <div class="entry">
+      <h3><%= link_to article.title, article_path(article) %></h3>
+      <p><%= article.created_at.strftime("%B %d, %Y") %></p>
+      <p><%= article.text %></p>
+    </div>
+  <% end %>
+  </div>
+  <div class="col-md-2">
+    <h4>Past Entries:</h4>
+    <% @allarticles.each do |article| %>
+    <p><%= article.created_at.strftime("%B %d, %Y") %><br>
+    <%= link_to article.title, article_path(article) %></p>
+    <% end %>
+  </div>
+  <div class="col-md-1"></div>
+</div>
+</div>
