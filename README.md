@@ -1,1 +1,1 @@
-Just a simple blog with two models (Articles and Projects) and authentication.
+Just a simple blog with two models (Articles and Projects) and authentication. 

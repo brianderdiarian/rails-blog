@@ -12,7 +12,7 @@
   <div class="col-md-1"></div>
   <div class="col-md-2">
   	<h4>Projects:</h4>
-    <% @allprojects.each do |project| %>
+    <p><% @allprojects.each do |project| %>
     <%= link_to project.title, project_path(project) %></p>
     <% end %>
     <br>
@@ -22,10 +22,8 @@
     <% end %>
   </div>
   <div class="col-md-6">
-    <div class="entry">
-      <h3><%= @article.title %></h3>
-      <p><%= @article.created_at.strftime("%B %d, %Y") %></p>
-      <p><%= auto_link(simple_format(@article.text, :link => :urls)) %></p>
+    <div class="entry" style="font-size: 13px">
+      <p><%= simple_format(@resume.body) %></p>
     </div>
   </div>
   <div class="col-md-2">

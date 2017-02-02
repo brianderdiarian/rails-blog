@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :articles
   resources :projects
+  resources :resumes
 
   root 'welcome#index'
 

@@ -8,6 +8,10 @@ class ArticlesController < ApplicationController
 
   def show
   	@article = Article.find(params[:id])
+    @allprojects = Project.all
+  	@allarticles = Article.all.reverse_order
+    @articles = Article.all
+    @allresumes = Resume.all
   end
 
   def new
