@@ -24,7 +24,7 @@
   <div class="col-md-6">
     <div class="entry">
       <h3><%= @project.title %></h3>
-      <p><%= auto_link(simple_format(@project.text, :link => :urls)) %></p>
+      <p><%= auto_link(simple_format(@project.text), :all, :target => "_blank") %></p>
     </div>
   </div>
   <div class="col-md-2">
